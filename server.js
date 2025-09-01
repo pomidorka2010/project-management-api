@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-// Database connection
+// Database connection setup
 const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/project_management';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
